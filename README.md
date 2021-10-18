@@ -1,6 +1,6 @@
-# JUST JS
+# Just JavaScript
 
-JUST JS é um curso de JavaScript do Dan Abramov e da Maggie Appleton.
+Just JavaScript é um curso de JavaScript puro ministrado por Dan Abramov e Maggie Appleton.
 
 # Parte 1: Mental Models
 

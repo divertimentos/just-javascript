@@ -35,6 +35,37 @@ Expressões podem ser entendidas como perguntas que você faz e o JavaScript é 
 
 # Parte 3: Values and Variables
 
+- Valores primitivos são imutáveis. São read-only.
+  Embora pareça que strings são um tipo de array, isso não é verdade. Isso significa que, embora seja possível acessar índices de strings da mesma forma que fazemos com índices de arrays, códigos como o seguinte não irão funcionar:
+  console.log(reaction) // 'yikes'
+
+```javascript
+let reaction = "yikes";
+reaction[0] = "l";
+console.log(reaction); // 'yikes'
+```
+
+"Contradictions reaveal gaps in mental models." (Dan Abramov)
+
+### Variables are wires
+
+Embora não seja possível "editar" strings, é possível fazê-lo com variáveis que guardam strings, pois:
+
+- **Variables are not values**
+- **_Variables point to values_**
+
+As variáveis, criadas com `let` são mutáveis. Você pode sobrescrevê-las. É por isso que usamos `const` quando queremos que os valores definidos originalmente sejam, além de imutáveis, impossíveis de serem sobrescritos.
+
+O conceito-chave aqui é imaginar que variáveis/constantes não "guardam" valores, elas apontam para valores localizados em endereços de memória do computador.
+
+### Rules of Assignment
+
+Um outro detalhe, que se torna óbvio neste contexto porém é importantíssimo, é que variáveis/constantes não guardam necessariamente valores; elas, na verdade quartam expressões, que retornam valores.
+
+- Expressões retornam valores.
+
+- `2` é uma expressão, `hello` é uma expressão. Se você perguntar `2` para o JavaScript, ele irá te responder "2". Se, no entanto, você pedir `let`, o compilador retornará um "_Uncaught ReferenceError: let is not defined_" porque `let` não é uma expressão que resulta em um valor. Chamamos de "**literais**" as expressões cujos valores retornados são os mesmos que passamos para o compilador.
+
 # Parte 4: Studying from the inside
 
 # Parte 5: Printing the Primitive Values

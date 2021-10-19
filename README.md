@@ -45,7 +45,7 @@ reaction[0] = "l";
 console.log(reaction); // 'yikes'
 ```
 
-"Contradictions reaveal gaps in mental models." (Dan Abramov)
+> "Contradictions reaveal gaps in mental models." (Dan Abramov)
 
 ### Variables are wires
 

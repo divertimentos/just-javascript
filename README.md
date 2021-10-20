@@ -72,6 +72,8 @@ Existem duas formas de observar o JS: por dentro e por fora. A parte de fora ana
 
 # Parte 5: Printing the Primitive Values
 
+![celestialSpheres](https://github.com/divertimentos/JustJavaScript/blob/main/media/celestialspheres-v2.png)
+
 # Parte 6: Meeting Objects and Functions
 
 # Parte 7: Equity of Values

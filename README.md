@@ -68,6 +68,8 @@ Um outro detalhe, que se torna óbvio neste contexto porém é importantíssimo,
 
 # Parte 4: Studying from the inside
 
+Existem duas formas de observar o JS: por dentro e por fora. A parte de fora analisa como humanos interagem com as máquinas, como se comportam ponteiros e endereços de memória. Já a parte de dentro trata de valores. Olharemos para o baixo nível das máquinas apenas quando necessário, pois isso não é imprescindível para aprender.
+
 # Parte 5: Printing the Primitive Values
 
 # Parte 6: Meeting Objects and Functions

@@ -74,6 +74,23 @@ Existem duas formas de observar o JS: por dentro e por fora. A parte de fora ana
 
 ![celestialSpheres](https://github.com/divertimentos/JustJavaScript/blob/main/media/celestialspheres-v2.png)
 
+### undefined
+
+Esse é *straightforward* porque existe apenas um valor associado a ele, que é ele próprio. Ou seja, podemos considerar o `undefined` um literal. 
+
+```javascript
+console.log(typeof(undefined)) // "undefined"
+```
+
+O `undefined` é um valor... que está indefinido não intencionalmente. Ele se posiciona no lugar de um outro valor que deveria estar lá, mas que, por causa de algum side-effect, não está. Quando o JavaScript não sabe qual valor mostrar, ele retorna `undefined`.
+
+```javascript
+let bandersnatch;
+console.log(bandersnatch) // undefined
+```
+
+
+
 # Parte 6: Meeting Objects and Functions
 
 # Parte 7: Equity of Values

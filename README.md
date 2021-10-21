@@ -76,20 +76,31 @@ Existem duas formas de observar o JS: por dentro e por fora. A parte de fora ana
 
 ### undefined
 
-Esse é *straightforward* porque existe apenas um valor associado a ele, que é ele próprio. Ou seja, podemos considerar o `undefined` um literal. 
+Esse é _straightforward_ porque existe apenas um valor associado a ele, que é ele próprio. Ou seja, podemos considerar o `undefined` um literal.
 
 ```javascript
-console.log(typeof(undefined)) // "undefined"
+console.log(typeof undefined); // "undefined"
 ```
 
 O `undefined` é um valor... que está indefinido não intencionalmente. Ele se posiciona no lugar de um outro valor que deveria estar lá, mas que, por causa de algum side-effect, não está. Quando o JavaScript não sabe qual valor mostrar, ele retorna `undefined`.
 
 ```javascript
 let bandersnatch;
-console.log(bandersnatch) // undefined
+console.log(bandersnatch); // undefined
 ```
 
+É importantar evitar achar que o `undefined` significa que a variável não está definida, pois ela está e a prova disso é justamente o fato do `undefined` ser um valor, um valor primitivo, assim como o "hello" e o `1234`.
 
+### null
+
+Assim como o `undefined`, o `null` também é um tipo que possui um único valor. Um #funFact sobre ele é que o JavaScript possui um antigo bug que faz com que o `typeof(null)` retorn `object`, o que não é verdade. O `null` é do tipo `null`. A "prova" de que `null` não é um objeto é o duck typing: ele não caminha como um objeto, não nada como um objeto, não grasna como um objeto, então não é um objeto.
+
+Como mencionado anteriormente, esse tipo é usado para valores vazios intencionais. Declarar um estado inicial no React com um valor indefinido? Use `null` no lugar de `undefined`. O `undefined` vai dar as caras se você renderizar um elemento antes do fetch à API terminar.
+
+### booleanos
+
+- "Should I stay or should I go?"
+- "Yes"
 
 # Parte 6: Meeting Objects and Functions
 

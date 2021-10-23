@@ -120,6 +120,17 @@ mas
 
 ### Números especiais (`NaN`, `Infinity`, `-Infinity`, `-0`) :sparkles:
 
+```javascript
+let scale = 0;
+let a = 1 / scale; // Infinity
+let b = 0 / scale; // NaN
+let c = -a; // -Infinity
+let d = 1 / c; // -0
+```
+
+O `NaN` é retornado quando você tenta realizar cálculos considerados inválidos, como dividir algum número por 0 (zero). O interessante é que o próprio `NaN` é do tipo `number`. Embora soe paradoxal, o fato do `NaN` ser um `number` é parecido com o motivo pelo qual o retorno de `typeof` ser do tipo `string`. Ele só poder ser um tipo numérico; não faria sentido ele ser `string`, `null` ou `undefined`.
+
+### BigInts
 
 # Parte 6: Meeting Objects and Functions
 

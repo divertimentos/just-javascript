@@ -12,3 +12,5 @@ console.log(`c = -a // --> ${c}`)
 
 let d = 1 / c
 console.log(`d = 1 / c // --> ${d}`)
+
+console.log(0 / 0)

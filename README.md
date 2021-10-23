@@ -102,6 +102,26 @@ Como mencionado anteriormente, esse tipo é usado para valores vazios intenciona
 - "Should I stay or should I go?"
 - "Yes"
 
+### números
+
+Bom, enquanto `null` e `undefined` possuem um único valor/item cada em seu conjunto-universo, os pertencentes aos `number` são 18 quintilhões, 437 quadrilhões, 736 trilhões, 874 bilhões, 454 milhões, 812 mil, 124 itens.
+
+> JavaScript uses numbers with limited precision (Dan Abramov)
+
+Isso significa que quanto mais próximos estivermos do `0` (zero), mais precisos estamos sendo. A linguagem de programação só vai usar seu maquinário de precisão para os números mais usados (por exemplo, os inteiros). É como a engine de um game que não gasta poder de processamento para renderizar uma árvore para a qual o personagem não está olhando, ou renderizar peixes dentro de um rio que o personagem está passando ao lado mas não entrou.
+
+Na prática, quaisquer números inteiros entre `Number.MIN_SAFE_INTEGER` e `Number.MAX_SAFE_INTEGER` são exatos. É por isso que:
+
+`0.1 + 0.2 === 0.3 // false`, 
+
+mas
+
+`10 + 20 === 30 // true`
+
+### Números especiais [emoji de :sparkles:]
+
+
+
 # Parte 6: Meeting Objects and Functions
 
 # Parte 7: Equity of Values

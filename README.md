@@ -128,9 +128,39 @@ let c = -a; // -Infinity
 let d = 1 / c; // -0
 ```
 
+`Infinity`/`-Infinity`: Quando você divide um número por zero (`0`) ou zero negativo (`-0`), o JavaScript te informa que o resultado é `Infinity` ou `-Infinity`. E é simplesmente isso.
+
+O professor Eddie Woo explica (neste vídeo)[https://www.youtube.com/watch?v=J2z5uzqxJNU&t=486s] que, como há duas formas de uma divisão por zero tender a infinito (aproximando-se dele tanto a partir da divisão por 1 quanto pela divisão por -1), o valor retornado seria indefinido/indefinível (_undefinable_ nos termos dele). Como a discussão sobre conceituação sobre a natureza dos infinitos positivos e negativos não interessa ao JavaScript, podemos nos dar por satisfeitos por esse tipo numérico mostrado em situações limítrofes como essas em que ocorre uma divisão por `0` ou `-0`.
+
 O `NaN` é retornado quando você tenta realizar cálculos considerados inválidos, como dividir algum número por 0 (zero). O interessante é que o próprio `NaN` é do tipo `number`. Embora soe paradoxal, o fato do `NaN` ser um `number` é parecido com o motivo pelo qual o retorno de `typeof` ser do tipo `string`. Ele só poder ser um tipo numérico; não faria sentido ele ser `string`, `null` ou `undefined`.
 
 ### BigInts
+
+Como o nome sugere, os BigInts dizem respeito aos inteiros maiores que `2**53`. Então, sempre que precisar representar inteiros maiores do que `Number.MAX_SAFE_INTEGER`, os BigInts são ideais.
+
+### Strings
+
+Strings são tipos primitivos do JavaScript. Isso significa que eles não podem ser objetos, OU SEJA: strings não podem receber propriedades. Possuem, no entanto, algumas propriedades built-in. Vou chamar isso aqui de magiquinha debaixo do capô :sparkles:!
+
+```javascript
+let cat = "Dante";
+console.log(cat.length); // 5
+console.log(cat[0]); // "D"
+console.log(cat[1]); // "a"
+```
+
+Uma prova de que, embora possuam algumas propriedades built-in, as strings não são objetos é o fato delas serem imutáveis. Você não pode transformar a string "Dante" em "Santo" usando `cat[0] = 'S'`. Sendo assim,
+
+> strings são **tipos primitivos** e todos os primitivos são imutáveis (Ban Adramov)
+
+### Symbols
+
+Symbols are useful among sorcerers and spellcasters.
+
+```javascript
+let alohomorra = Symbol();
+console.log(typeof alohomorra); // "symbol"
+```
 
 # Parte 6: Meeting Objects and Functions
 

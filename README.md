@@ -164,6 +164,28 @@ console.log(typeof alohomorra); // "symbol"
 
 # Parte 6: Meeting Objects and Functions
 
+### Objetos
+
+- Objetos são mutáveis
+- Objetos possuem propriedades acessíveis através de `.` e `[]`.
+
+Uma das diferenças principais entre os objetos e os tipos primitivos é que: sendo eles mutáveis, isso significa que podemos criar nossos próprios objetos, diferentemente do que acontecia com os primitivos. No caso dos primitivos, eles já existem e nós apenas os sumonamos.
+
+E o mesmo acontecerá para arrays, datas e todos os outros objetos. Todos os objetos criados são inéditos, são novos, valores que não pré-existiam.
+
+```javascript
+let shrek = {};
+let donkey = {};
+
+console.log(shrek === donkey); // false
+```
+
+E o mesmo acontecerá para arrays, datas e todos os outros objetos. Todos os objetos criados são inéditos, são novos, valores que não pré-existiam.
+
+### Funções
+
+Funções são valores. Period.
+
 # Parte 7: Equity of Values
 
 # Parte 8: Properties

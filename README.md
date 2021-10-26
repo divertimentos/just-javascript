@@ -180,11 +180,11 @@ let donkey = {};
 console.log(shrek === donkey); // false
 ```
 
-E o mesmo acontecerá para arrays, datas e todos os outros objetos. Todos os objetos criados são inéditos, são novos, valores que não pré-existiam.
-
 ### Funções
 
 Funções são valores. Period.
+
+Parênteses `()` chamam funções, ou seja, executam o código do corpo da função e fazem com que o valor após o `return` seja retornado.
 
 # Parte 7: Equity of Values
 

@@ -42,10 +42,15 @@
 //
 // console.log(shrek === donkey)
 
-const converter = function(string) {
-  return Number(string);
-};
+// const converter = function(string) {
+//   return Number(string);
+// };
 
-const convertido = converter("10");
-console.log(`Tipo da const 'convertido': ${typeof convertido}`); // number
-console.log(`Tipo da função 'converter': ${typeof converter}`); // function
+// const convertido = converter("10");
+// console.log(`Tipo da const 'convertido': ${typeof convertido}`); // number
+// console.log(`Tipo da função 'converter': ${typeof converter}`); // function
+
+
+let countDwarves = function() { return  7; }
+let dwarves = countDwarves;
+console.log(dwarves)

@@ -188,6 +188,75 @@ Parênteses `()` chamam funções, ou seja, executam o código do corpo da funç
 
 # Parte 7: Equity of Values
 
+Existem três principais tipos de igualdade no JS:
+
+- Igualdade estrita: `a === b`
+- Igualdade livre: `a == b`
+- Igualdade de valores iguais: `Object.is(a, b)`
+
+### Same Value Equality
+
+Comparam valores.
+
+```javascript
+let dwarves = 7;
+let continents = "7";
+let worldWonders = 3 + 4;
+
+console.log(Object.is(dwarves, continents)); // false
+console.log(Object.is(continents, worldWonders)); // false
+console.log(Object.is(worldWonders, dwarves)); // true
+```
+
+### Diferença entre Same Value Equality e Strict Equality (`===`)
+
+São idênticos em todos os aspectos, exceto em duas exceções à regra, justamente quando se trata de dois tipos numéricos especiais, o `NaN` (_Not a number_) e o `-0` (zero negativo)
+
+#### Caso especial 1/2: `NaN`:
+
+```javascript
+console.log(NaN === NaN); // false
+console.log(Object.is(NaN, NaN)); // true
+```
+
+Embora `NaN === NaN` seja `false`, eles ainda correspondem ao mesmo **valor**.
+
+Pelo que entendi, o `NaN` é um **_falsy_**, o que significa que se utilizarmos a comparação estrita (`===`), eles resultam em `false`; porém, como o `NaN` corresponde a um único valor dentro desse tipo numérico (ou seja, não existem dois `NaN`), então o `Object.is(NaN, NaN)` vai retornar `true`. Eu sei, é confuso.
+
+Um uso prático do `Object.is()` aplicado ao `NaN` é quando queremos usar um `if()` para checar se um valor é `NaN`. Como o `if()` precisa de uma condição verdadeira (até por uma questão de legibilidade), uma função como esta faz total sentido:
+
+```javascript
+function resizeImage(size) {
+  if (Object.is(size, NaN)) {
+    console.log("There is something wrong!");
+  }
+}
+```
+
+Mas claro que podemos usar também o `Number.isNaN(size)` e, surpreendentemente, o `size !== size`. Esse último só retorna `true` se for falso que `size` e `size` são iguais. Essa condição só é verdadeira se `size` é um `NaN`.
+
+#### Caso especial 2/2: `-0` (zero negativo)
+
+Com os zeros acontece o contrário: `0 === -0` (e vice-versa) returna `true`, porém, debaixo do capô, a nível de bits alocados em memória, fundamentalmente os valores `0` e `-0` são diferentes/distintos.
+
+O Dan, no entanto, destaca que, na prática, ele nunca se deparou com algum caso em que essa diferenciação se fizesse necessária.
+
+Ok, o JavaScript ainda tem algumas partes confusas, controversas e que soam contraditórias, e o melhor que fazemos é siplesmente aceitar.
+
+O Dan reitera novamente que os casos especiais são extremamente raros e muito provavelmente não iremos nos deparar com eles, o que significa que `a === b` e `Object.is(a, b)` continuarão sendo intercambiáveis.
+
+### Loose Equality
+
+Bom, essa é a seção em que coisas como estas acontecem:
+
+```javascript
+console.log([] == ""); // true
+console.log(true == [1]); // true
+console.log(false == [0]); // true
+```
+
+Também chamada de igualdade abstrata... bom, não tem muito a ser dito. Apenas evite usar `a == b`.
+
 # Parte 8: Properties
 
 # Parte 9: Mutation

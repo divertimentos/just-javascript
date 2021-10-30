@@ -117,3 +117,14 @@
 // } else {
 //   console.log("Else entrou");
 // }
+
+// let ticketId = 0;
+// ticketId = -0;
+
+// if (ticketId === 0) {
+//   console.log("Bad ticket");
+// } else {
+//   console.log(`Good ticket: ${ticketId}`);
+// }
+
+console.log(NaN === NaN)

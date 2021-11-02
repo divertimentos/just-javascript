@@ -127,4 +127,44 @@
 //   console.log(`Good ticket: ${ticketId}`);
 // }
 
-console.log(NaN === NaN)
+// console.log(NaN === NaN)
+
+// let zoio = {
+//   nickname: "Eyez of the Thunder",
+//   favoriteArtist: "Slipknot",
+// };
+
+// console.log("Apelido do Zóio:", zoio.nickname); // "Eyez of the Thunder"
+// console.log("Artista favorito do Zóio: ", zoio.favoriteArtist); // "Slipknot"
+
+// let guilherme = zoio;
+// guilherme.nickname = "GG";
+// guilherme.favoriteArtist = "Barões da Pisadinha";
+
+// console.log("Apelido do Guilherme: ", guilherme.nickname); // "GG"
+// console.log("Artista favorito do Guilherme: ", guilherme.favoriteArtist); // "Barões da Pisadinha"
+
+// console.log("Apelido do Zóio:", zoio.nickname); // "GG"
+// console.log("Artista favorito do Zóio: ", zoio.favoriteArtist); // "Barões da Pisadinha"
+
+// let captain = "Jim";
+// console.log(captain);
+
+// let ship = {
+//   captain: captain,
+// };
+
+// console.log(ship);
+
+// captain = "Naomi";
+// console.log(ship)
+
+let singer = { surname: "Turner" };
+let pilot = { surname: "Kamal" };
+
+singer.temp = pilot.surname;
+pilot.surname = singer.surname;
+singer.surname = singer.temp;
+
+console.log(singer.surname);
+console.log(pilot.surname);

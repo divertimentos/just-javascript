@@ -259,6 +259,18 @@ Também chamada de igualdade abstrata... bom, não tem muito a ser dito. Apenas 
 
 # Parte 8: Properties
 
+As propriedades funcionam difentemente no nosso modelo mental. Precisaremos expandir nossa compreensão para que daqui, pra frente, nada soe contraditório.
+
+Primeiro de tudo: ao contrário das variáveis, as propriedades pertencem a um objeto particular. Significa que as propriedades que você sobreescrever são alteradas em todas as 'instâncias/variáveis' que apontam para o objeto ao qual pertencem tais propriedades.
+
+No modelo mental proposto, tanto variáveis quanto propriedades são 'fios'. Entretanto, as propriedades estão atreladas a objetos, não a variáveis.
+
+Outro detalhe é: propriedades não guardam valores, elas apontam para eles.
+
+E, para reiterar outro axioma do nosso modelo mental, **todos os fios apontam para valores**.
+
 # Parte 9: Mutation
+
+Este capítulo serve para explicar por que valores de propriedades são mutáveis. Também serve para explicar o que aconteceu no primeiro exemplo do curso.
 
 # Parte 10: Prototypes

@@ -271,6 +271,6 @@ E, para reiterar outro axioma do nosso modelo mental, **todos os fios apontam pa
 
 # Parte 9: Mutation
 
-Este capítulo serve para explicar por que valores de propriedades são mutáveis. Também serve para explicar o que aconteceu no primeiro exemplo do curso.
+Este capítulo serve para explicar por que valores de propriedades são mutáveis. Também serve para explicar o que aconteceu (no primeiro exemplo do curso)[https://github.com/divertimentos/just-javascript/blob/28366f7e6dca29f2eae790caf115771da4b78183/README.md?plain=1#L11]
 
 # Parte 10: Prototypes

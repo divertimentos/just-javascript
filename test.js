@@ -129,42 +129,30 @@
 
 // console.log(NaN === NaN)
 
-// let zoio = {
-//   nickname: "Eyez of the Thunder",
-//   favoriteArtist: "Slipknot",
+// let sherlock = {
+//   surname: "Holmes",
+//   address: { city: "London" },
 // };
 
-// console.log("Apelido do Zóio:", zoio.nickname); // "Eyez of the Thunder"
-// console.log("Artista favorito do Zóio: ", zoio.favoriteArtist); // "Slipknot"
-
-// let guilherme = zoio;
-// guilherme.nickname = "GG";
-// guilherme.favoriteArtist = "Barões da Pisadinha";
-
-// console.log("Apelido do Guilherme: ", guilherme.nickname); // "GG"
-// console.log("Artista favorito do Guilherme: ", guilherme.favoriteArtist); // "Barões da Pisadinha"
-
-// console.log("Apelido do Zóio:", zoio.nickname); // "GG"
-// console.log("Artista favorito do Zóio: ", zoio.favoriteArtist); // "Barões da Pisadinha"
-
-// let captain = "Jim";
-// console.log(captain);
-
-// let ship = {
-//   captain: captain,
+// let john = {
+//   surname: "Watson",
+//   address: sherlock.address,
 // };
 
-// console.log(ship);
+// john.surname = "Lennon";
+// john.address.city = "Malibu";
 
-// captain = "Naomi";
-// console.log(ship)
+// console.log(sherlock);
+// console.log(john);
 
-let singer = { surname: "Turner" };
-let pilot = { surname: "Kamal" };
+let onion = {
+  taste: "classical",
+};
 
-singer.temp = pilot.surname;
-pilot.surname = singer.surname;
-singer.surname = singer.temp;
+let music = {
+  taste: onion.taste,
+};
 
-console.log(singer.surname);
-console.log(pilot.surname);
+console.log(music.taste); // "classical";
+onion.taste = "umami";
+console.log(music.taste); // "umami"

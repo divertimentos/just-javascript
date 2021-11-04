@@ -271,6 +271,31 @@ E, para reiterar outro axioma do nosso modelo mental, **todos os fios apontam pa
 
 # Parte 9: Mutation
 
-Este capítulo serve para explicar por que valores de propriedades são mutáveis. Também serve para explicar o que aconteceu [no primeiro exemplo do curso](https://github.com/divertimentos/just-javascript/blob/28366f7e6dca29f2eae790caf115771da4b78183/README.md?plain=1#L11)
+Este capítulo serve para explicar por que valores de propriedades são mutáveis. Também serve para explicar o que aconteceu [no primeiro exemplo do curso](https://github.com/divertimentos/just-javascript/blob/28366f7e6dca29f2eae790caf115771da4b78183/README.md?plain=1#L11).
+
+Para evitar o problema de provocar mutação em uma propriedade criada por um objeto e "herdada" por outro, podemos criar objetos novos apontando para o novo valor.
+
+Assim, em vez de:
+
+```javascript
+john.address.city = "Malibu"; // aponta para o valor de sherlock.address
+```
+
+podemos escrever:
+
+```javascript
+john.address = { city: "Malibu" };
+```
+
+É possível resolver o problema ao criar o objeto. Desta forma:
+
+```javascript
+john = {
+  surname: "Lennon",
+  address: { city: "Malibu" },
+};
+```
+
+
 
 # Parte 10: Prototypes

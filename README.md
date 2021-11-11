@@ -296,6 +296,10 @@ john = {
 };
 ```
 
+No nosso universo, cada objeto é uma entidade independente. Isso significa que não existe nesting: não existem objetos dentro de outros objetos.
 
+Propriedades, assim como variáveis/constantes, apontam para valores. Sempre.
+
+E a ideia de "nesting objects" é errada porque pode haver mais de um objeto apontando para um mesmo valor. Se alteramos esse valor, é como se estivéssemos alterando todos esses objetos de uma só vez.
 
 # Parte 10: Prototypes

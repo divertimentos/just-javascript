@@ -145,14 +145,70 @@
 // console.log(sherlock);
 // console.log(john);
 
-let onion = {
-  taste: "classical",
+// let onion = {
+//   taste: "classical",
+// };
+
+// let music = onion
+
+// console.log(music.taste);
+// onion.taste = "umami";
+// console.log(music.taste);
+
+// let rapper = {
+//   beef: "legit",
+// };
+
+// let burger = {
+//   beef: "veggie",
+// };
+
+// console.log(burger.beef); // 'veggie'
+// burger = rapper;
+// console.log(burger.beef); // 'legit'
+
+// console.log(charlotte.mother.age); // 20
+// console.log(charlotte.child.age); // 20
+
+// charlotte.mother.age = 21;
+
+// console.log(charlotte.mother.age); // 21
+// console.log(charlotte.child.age); // 21
+
+// music = {
+//   taste: "Classical",
+// };
+
+// onion = music;
+
+// console.log(music.taste); // "classical"
+// onion.taste = "unami";
+// console.log(music.taste); // "umami"
+
+// let burger = {
+//   beef: "veggie",
+// };
+
+// let rapper = {
+//   beef: "legit",
+// };
+
+// console.log(burger.beef); // "veggie"
+// burger = rapper;
+// console.log(burger.beef); // "legit"
+
+let charlotte = {
+  mother: {
+    age: 20,
+  },
 };
 
-let music = {
-  taste: onion.taste,
-};
+charlotte.child = charlotte.mother
 
-console.log(music.taste); // "classical";
-onion.taste = "umami";
-console.log(music.taste); // "umami"
+console.log(charlotte.mother.age); // 20
+console.log(charlotte.child.age); // 20
+
+charlotte.mother.age = 21;
+
+console.log(charlotte.mother.age); // 21
+console.log(charlotte.child.age); // 21

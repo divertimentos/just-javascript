@@ -233,31 +233,52 @@ console.clear();
 
 // console.log(gwen.teeth);
 
-function Donut() {
-  return { shape: "round" };
+// function Donut() {
+//   return { shape: "round" };
+// }
+// Donut.prototype = {
+//   eat: () => {
+//     console.log("Nom nom nom");
+//   },
+// };
+
+// let donut1 = new Donut(); // __proto__: Donut.prototype
+// let donut2 = new Donut(); // __proto__: Donut.prototype
+
+// // donut1.eat();
+// // donut2.eat();
+
+// let goose = {
+//   location: "heaven",
+// };
+
+// let cheese = {
+//   __proto__: goose,
+// };
+
+// console.log(cheese === goose); // false
+// console.log(cheese.location);
+
+// goose.location = "hell";
+// console.log(cheese.location); // "hell"
+
+console.clear()
+const foo = {
+  bar() {
+    console.log("oi")
+  }
 }
-Donut.prototype = {
-  eat: () => {
-    console.log("Nom nom nom");
-  },
-};
 
-let donut1 = new Donut(); // __proto__: Donut.prototype
-let donut2 = new Donut(); // __proto__: Donut.prototype
+// console.log(foo.bar())
 
-// donut1.eat();
-// donut2.eat();
+// var obj;
+// console.log(obj)
 
-let goose = {
-  location: "heaven",
-};
+var v = 1
+var f1 = function() {
+  console.log(v)
+}
 
-let cheese = {
-  __proto__: goose,
-};
-
-console.log(cheese === goose); // false
-console.log(cheese.location);
-
-goose.location = "hell";
-console.log(cheese.location); // "hell"
+var f2 = function() {
+  var v =
+}

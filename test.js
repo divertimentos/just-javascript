@@ -197,18 +197,67 @@
 // burger = rapper;
 // console.log(burger.beef); // "legit"
 
-let charlotte = {
-  mother: {
-    age: 20,
+// let charlotte = {
+//   mother: {
+//     age: 20,
+//   },
+// };
+
+// charlotte.child = charlotte.mother
+
+// console.log(charlotte.mother.age); // 20
+// console.log(charlotte.child.age); // 20
+
+// charlotte.mother.age = 21;
+
+// console.log(charlotte.mother.age); // 21
+// console.log(charlotte.child.age); // 21
+
+console.clear();
+
+// let proto = {};
+// proto.__proto__.taste = "pineapple";
+
+// let pizza = {};
+// console.log(pizza.taste);
+
+// let human = {
+//   teeth: 32,
+// };
+
+// let gwen = {
+//   __proto__: human,
+
+//   age: 19,
+// };
+
+// console.log(gwen.teeth);
+
+function Donut() {
+  return { shape: "round" };
+}
+Donut.prototype = {
+  eat: () => {
+    console.log("Nom nom nom");
   },
 };
 
-charlotte.child = charlotte.mother
+let donut1 = new Donut(); // __proto__: Donut.prototype
+let donut2 = new Donut(); // __proto__: Donut.prototype
 
-console.log(charlotte.mother.age); // 20
-console.log(charlotte.child.age); // 20
+// donut1.eat();
+// donut2.eat();
 
-charlotte.mother.age = 21;
+let goose = {
+  location: "heaven",
+};
 
-console.log(charlotte.mother.age); // 21
-console.log(charlotte.child.age); // 21
+let cheese = {
+  __proto__: goose,
+};
+
+console.log(cheese === goose); // false
+console.log(cheese.location);
+
+goose.location = "hell";
+console.log(cheese.location); // "hell"
